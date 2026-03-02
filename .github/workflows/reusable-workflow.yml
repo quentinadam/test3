@@ -10,12 +10,5 @@ jobs:
       - name: Checkout caller repository
         uses: actions/checkout@v4
 
-      - name: Checkout test3 action
-        uses: actions/checkout@v4
-        with:
-          repository: quentinadam/test3
-          ref: ${{ github.ref_name }}
-          path: /tmp/test3-action
-
       - name: Call composite action
-        uses: /tmp/test3-action
+        uses: quentinadam/test3@${{ github.action_ref }}
