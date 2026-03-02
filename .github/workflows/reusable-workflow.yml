@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Call composite action
-        uses: quentinadam/test3@${{ github.action_ref }}
+        uses: quentinadam/test3@${{ github.sha }}
