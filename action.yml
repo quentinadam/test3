@@ -1,0 +1,8 @@
+name: 'Echo DateTime'
+description: 'A composite action that calls a bash script to echo the current date/time'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run echo-datetime script
+      run: ${{ github.action_path }}/scripts/echo-datetime.sh
+      shell: bash
